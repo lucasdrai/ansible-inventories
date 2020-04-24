@@ -15,20 +15,20 @@ adam-dbserver1
 
 # webservers in all applications
 [rec_webservers:children]
-upac_webservers
-adam_webservers
+rec_upac_webservers
+rec_adam_webservers
 
 # dbservers in all applications
 [rec_dbservers:children]
-upac_dbservers
-adam_dbservers
+rec_upac_dbservers
+rec_adam_dbservers
 
 # everything in upac application
 [rec_upac:children]
-upac_webservers
-upac_dbservers
+rec_upac_webservers
+rec_upac_dbservers
 
 # everything in adam application
 [rec_adam:children]
-adam_webservers
-adam_dbservers
+rec_adam_webservers
+rec_adam_dbservers
