@@ -1,34 +1,34 @@
-[upac_webservers]
+[prod_upac_webservers]
 upac-webserver1
 upac-webserver2
 
-[adam_webservers]
+[prod_adam_webservers]
 adam-webserver1
 adam-webserver2
 
-[upac_dbservers]
+[prod_upac_dbservers]
 upac-dbserver1
 upac-dbserver2
 
-[adam_dbservers]
+[prod_adam_dbservers]
 adam-dbserver1
 
 # webservers in all applications
-[webservers:children]
+[prod_webservers:children]
 upac_webservers
 adam_webservers
 
 # dbservers in all applications
-[dbservers:children]
+[prod_dbservers:children]
 upac_dbservers
 adam_dbservers
 
 # everything in upac application
-[upac:children]
+[prod_upac:children]
 upac_webservers
 upac_dbservers
 
 # everything in adam application
-[adam:children]
+[prod_adam:children]
 adam_webservers
 adam_dbservers
