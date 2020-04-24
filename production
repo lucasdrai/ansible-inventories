@@ -1,0 +1,34 @@
+[upac_webservers]
+upac-webserver1
+upac-webserver2
+
+[adam_webservers]
+adam-webserver1
+adam-webserver2
+
+[upac_dbservers]
+upac-dbserver1
+upac-dbserver2
+
+[adam_dbservers]
+adam-dbserver1
+
+# webservers in all applications
+[webservers:children]
+upac_webservers
+adam_webservers
+
+# dbservers in all applications
+[dbservers:children]
+upac_dbservers
+adam_dbservers
+
+# everything in upac application
+[upac:children]
+upac_webservers
+upac_dbservers
+
+# everything in adam application
+[adam:children]
+adam_webservers
+adam_dbservers
